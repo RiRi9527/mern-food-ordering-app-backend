@@ -10,9 +10,9 @@ router.get("/", jwtCheck, jwtParse, MyUserController.getCurrentUser);
 router.post("/", jwtCheck, MyUserController.createCurrentUser);
 router.put(
   "/",
+  validateMyUserRequest,
   jwtCheck,
   jwtParse,
-  validateMyUserRequest,
   MyUserController.updateCurrentUser
 );
 
